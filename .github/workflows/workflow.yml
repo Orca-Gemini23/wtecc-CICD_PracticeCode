@@ -1,0 +1,16 @@
+name: CI workflow 
+
+# Adding the trigger 
+on:
+  push: 
+    branches: [main]
+  pull_request: 
+    branches: [main]
+
+  
+## Adding the jobs part 
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
+
